@@ -1,0 +1,22 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.0.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.tvajjala'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:27.1-jre'
+    implementation 'com.github.tomakehurst:wiremock-standalone:2.22.0'
+    implementation 'org.springframework.boot:spring-boot-starter'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}

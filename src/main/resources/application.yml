@@ -1,0 +1,17 @@
+logging:
+  level:
+    # Enabling trace for app specific logging.
+    com.pnc.microservices: INFO
+    org.springframework: INFO
+    org.springframework.web: WARN
+    org.springframework.boot: WARN
+    springfox.documentation: WARN
+
+wiremock:
+  port: 8084 # mock ServerPort
+
+spring:
+  output:
+    ansi:
+      enabled: always
+

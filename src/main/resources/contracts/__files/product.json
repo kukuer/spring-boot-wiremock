@@ -1,0 +1,48 @@
+{
+  "product": {
+    "id": 0,
+    "name": "string",
+    "description": "string",
+    "price": 0,
+    "discount": 0,
+    "weight": 1,
+    "stock": 100,
+    "stock_unlimited": true,
+    "sku": "string",
+    "featured": false,
+    "status": "available",
+    "created_at": "string",
+    "package_format": "box",
+    "length": 0,
+    "width": 0,
+    "height": 0,
+    "diameter": 0,
+    "permalink": "string",
+    "categories": [
+      {
+        "id": 0,
+        "name": "string",
+        "parent_id": 0,
+        "permalink": "string"
+      }
+    ],
+    "images": [
+      {
+        "id": 0,
+        "position": 0,
+        "url": "string"
+      }
+    ],
+    "variants": [
+      {
+        "id": 0,
+        "price": 0,
+        "discount": 0,
+        "sku": "string",
+        "stock": 100,
+        "stock_unlimited": true
+      }
+    ]
+  }
+}
+

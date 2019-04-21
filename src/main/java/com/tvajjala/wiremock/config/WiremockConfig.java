@@ -21,7 +21,6 @@ public class WiremockConfig {
     private int mockServerPort;
 
 
-
     private static final Logger LOGGER = LoggerFactory.getLogger(WiremockConfig.class);
 
 
@@ -42,9 +41,9 @@ public class WiremockConfig {
                 .jettyHeaderBufferSize(16834)
                 .enableBrowserProxying(true)
                 //.notifier(new Slf4jNotifier(true))
-                .usingFilesUnderClasspath("/contracts");// can be read from property file but no benefit with that
+                .usingFilesUnderClasspath("src/main/resources/contracts");// can be read from property file but no benefit with that
 
-        LOGGER.info("Creating instance of WireMockServer with stubs location {}  ","/contracts");
+        LOGGER.info("Creating instance of WireMockServer with stubs location {}  ", "/contracts");
         return new WireMockServer(configuration);
     }
 

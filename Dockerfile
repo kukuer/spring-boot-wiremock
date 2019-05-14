@@ -27,18 +27,18 @@ RUN ./gradlew build -x test -i
 #Stage - #2
 #We need JRE now to run the app , NO JDK not required
 FROM openjdk:8-jre
-
+LABEL maintainer="tvajjala.in"
 
 # create folder inside docker env
-ENV HOME=/root
+ENV HOTBOX=/root
 
-WORKDIR $HOME
+WORKDIR $HOTBOX
 
 #Copy FAT JAR from previous stage to create final docker image
 COPY --from=GENERATE_FAT_FILE /root/dev/app/build/libs/* .
 
 #copy wiremock contracts (this is specific to my app)
-COPY contracts $HOME/contracts
+COPY contracts $HOTBOX/contracts
 
 EXPOSE 8080
 

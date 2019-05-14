@@ -6,10 +6,9 @@ logging:
     com.github: debug
 
 wiremock:
-  port: 8084 # mock ServerPort
+  port: 8080 # mock ServerPort
 
 spring:
   output:
     ansi:
       enabled: always
-

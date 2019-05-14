@@ -1,0 +1,41 @@
+== MultiStage Docker Image
+
+
+*Command used to check the content inside the docker image*
+
+[source,bash]
+.interactive_mode.sh
+----
+$ docker run -it <image_name> sh
+----
+
+
+
+[source,bash]
+.build_history.sh
+----
+docker image history --no-trunc <IMAGE_NAME> > image_history.txt
+----
+
+
+
+*For images with an entrypoint configured, you can run*
+
+----
+$ docker run -it --entrypoint sh
+----
+
+*Inspect docker*
+
+[source,bash]
+.inspect.sh
+----
+$ docker image inspect <IMAGE_ID>
+----
+
+
+
+
+
+
+

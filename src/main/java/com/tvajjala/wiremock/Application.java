@@ -6,23 +6,28 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.TimeZone;
+
 /**
  * Entry point to WireMock Server
+ *
+ * @author ThirupathiReddy Vajjala
  */
 @SpringBootApplication
-public class Application implements CommandLineRunner{
+public class Application implements CommandLineRunner {
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
 
 
-	@Autowired
+    @Autowired
     WireMockServer wireMockServer;
 
     @Override
     public void run(String... args) {
 
+        TimeZone.setDefault(TimeZone.getTimeZone("GMT"));
 
         wireMockServer.start();
     }

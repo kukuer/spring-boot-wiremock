@@ -1,0 +1,12 @@
+{
+  "data": {
+    "id": 0,
+    "name": "string",
+    "address": {
+      "line1": "400 Jefferson Park",
+      "city": "Whippany",
+      "state": "NJ"
+    }
+  }
+}
+
